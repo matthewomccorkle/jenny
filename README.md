@@ -1,34 +1,43 @@
 # Why ?
 
-This script has been made for quick creation of usernames to use against AD when you only have the names and surnames for OSCP, Labs... 
 
-It's not perfect, feel free to modify it.
+This fork is an update to the AD-Username Generator by w0Tx.
+You can find their original project here: [https://github.com/w0Tx/generate-ad-username](https://github.com/w0Tx/generate-ad-username).
 
-Naming convention can be found there : https://book.hacktricks.xyz/windows/active-directory-methodology#cheat-sheet
-
-```
-NameSurname
-Name.Surname
-NamSur (3letters of each)
-Nam.Sur
-NSurname
-N.Surname
-SurnameName
-Surname.Name
-SurnameN
-Surname.N
-```
-
-# How ?
-
-Input names should be seperated by ','.
+I created this as a way to learn Python and also as a method for generating usernames from a CSV file. 
+<br>
+### Note: Outputs all names as lowercase
+<br>
+The output naming options are below (includes a kitchen sink option for outputting all options [ ]):
 
 ```
-test,test2
-test3,test4
+
 ```
 
-Then : `python3 ADGenerator.py names.txt`
+# Install?:
+
+```
+git clone https://github.com/matthewomccorkle/jenny.git
+```
+
+# Usage
+
+### 1 . Format your CSV
+
+CSV file format should have names seperated by commas (,).
+**Example CSV:**
+
+```
+First,Last
+First2,Last2
+First3,Last3
+```
+### 2. Run jenny.py
+```
+python3 jenny.py <CSV_FILE> options
+```
+
+
 
 Example of output : 
 
