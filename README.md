@@ -68,7 +68,7 @@ julian.asange
 ```
 
 **specify multiple syntax choices example:**
-'''
+```
 python3 jenny.py --file example.csv --first-last --lasfir --fir-las
 john.doe
 joh.doe
@@ -82,7 +82,7 @@ smiwil
 julian.asange
 jul.asa
 asajul
-'''
+```
 
 **Kitchen Sink example:**  
 
