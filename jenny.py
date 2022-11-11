@@ -2,10 +2,10 @@
 import csv
 import argparse
 
-parser = argparse.ArgumentParser(description='Username conversion tool.'
-											' Convert a CSV file formatted as First,Last to any option.'
-											' Automatically converts all text to lowercase.'
-											)
+parser = argparse.ArgumentParser(
+	description='Username conversion tool.'
+	' Convert a CSV file formatted as First,Last to any option.'
+	' Automatically converts all text to lowercase.')
 '''
 Input file.
 '''
