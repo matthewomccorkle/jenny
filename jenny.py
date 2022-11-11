@@ -30,41 +30,41 @@ Eventual option to add @domain.xyz to outputs.
 
 
 
-name_parser = parser.add_mutually_exclusive_group(required=True)
+#name_parser = parser.add_mutually_exclusive_group(required=True)
 '''
 Below here are the first last syntax options.
 '''
-name_parser.add_argument('--first-last', action="store_true", required=False,
+parser.add_argument('--first-last', action="store_true", required=False,
 					help='first.last')
-name_parser.add_argument('--f-last', action="store_true", required=False,
+parser.add_argument('--f-last', action="store_true", required=False,
 					help='f.last')
-name_parser.add_argument('--first-l', action="store_true", required=False,
+parser.add_argument('--first-l', action="store_true", required=False,
 					help='first.l')
-name_parser.add_argument('--fir-las', action="store_true", required=False,
+parser.add_argument('--fir-las', action="store_true", required=False,
 					help='fir.las')
-name_parser.add_argument('--firstlast', action="store_true", required=False,
+parser.add_argument('--firstlast', action="store_true", required=False,
 					help='firstlast')
-name_parser.add_argument('--firlas', action="store_true", required=False,
+parser.add_argument('--firlas', action="store_true", required=False,
 					help='firlas')
 '''
 Below here are the last first syntax options.
 '''
-name_parser.add_argument('--last-first', action="store_true", required=False,
+parser.add_argument('--last-first', action="store_true", required=False,
 					help='last.first')
-name_parser.add_argument('--l-first', action="store_true", required=False,
+parser.add_argument('--l-first', action="store_true", required=False,
 					help='l.first')
-name_parser.add_argument('--last-f', action="store_true", required=False,
+parser.add_argument('--last-f', action="store_true", required=False,
 					help='last.f')
-name_parser.add_argument('--las-fir', action="store_true", required=False,
+parser.add_argument('--las-fir', action="store_true", required=False,
 					help='las.fir')
-name_parser.add_argument('--lastfirst', action="store_true", required=False,
+parser.add_argument('--lastfirst', action="store_true", required=False,
 					help='lastfirst')
-name_parser.add_argument('--lasfir', action="store_true", required=False,
+parser.add_argument('--lasfir', action="store_true", required=False,
 					help='lasfir')
 '''
 Kitchen Sink option.
 '''
-name_parser.add_argument('--sink', action="store_true", required=False,
+parser.add_argument('--sink', action="store_true", required=False,
 					help='Returns formatted username list using all options. This creates 12 versions of each name.')
 
 args = parser.parse_args()
