@@ -13,7 +13,7 @@ I created this as a way to learn Python and also as a method for generating user
 Future Options:
 ```
 -o : Output the usernames to a file.
---nocap : maintain capitalization of input CSV file (disable conversion to lowercase).
+--nocap : Maintain capitalization of input CSV file (disable conversion to lowercase).
 ```
 
 # Install:
