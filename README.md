@@ -2,19 +2,21 @@
 
 
 This fork is an update to the AD-Username Generator by w0Tx.
+
 You can find their original project here: [https://github.com/w0Tx/generate-ad-username](https://github.com/w0Tx/generate-ad-username).
 
 I created this as a way to learn Python and also as a method for generating usernames from a CSV file. 
 <br>
-### Note: Outputs all names as lowercase
+### Note: Currently outputs all names as lowercase to stdout.
 <br>
-The output naming options are below (includes a kitchen sink option for outputting all options [ ]):
 
+Future Options:
+```
+-o : Output the usernames to a file.
+--nocap : maintain capitalization of input CSV file (disable conversion to lowercase).
 ```
 
-```
-
-# Install?:
+# Install:
 
 ```
 git clone https://github.com/matthewomccorkle/jenny.git
@@ -33,34 +35,99 @@ First2,Last2
 First3,Last3
 ```
 ### 2. Run jenny.py
+
+**Help Menu**
 ```
-python3 jenny.py <CSV_FILE> options
+python3 jenny.py -h
+
+options:
+  -h, --help    show this help message and exit
+  -file FILE    names_file.csv
+  --first-last  first.last
+  --f-last      f.last
+  --first-l     first.l
+  --fir-las     fir.las
+  --firstlast   firstlast
+  --firlas      firlas
+  --last-first  last.first
+  --l-first     l.first
+  --last-f      last.f
+  --las-fir     las.fir
+  --lastfirst   lastfirst
+  --lasfir      lasfir
+  --sink        Returns formatted username list using all options. This creates 12 versions of each name.
+```
+**first.last example:**
+```
+python3 jenny.py -f example.csv --first-last
+
+john.doe
+jane.neena
+william.smith
+julian.asange
 ```
 
 
-
-Example of output : 
+**Kitchen Sink example:**  
 
 ```
-metodijelizabeta
-metodij-elizabeta
-metodij.elizabeta
-meteli
-met-eli
-met.eli
-melizabeta
-m-elizabeta
-m.elizabeta
-elizabetametodij
-elizabeta-metodij
-elizabeta.metodij
-elimet
-eli-met
-eli.met
-emetodij
-e-metodij
-e.metodij
-elizabetam
-elizabeta-m
-elizabeta.m
+# python3 jenny.py -f example.csv --sink
+john.doe
+j.doe
+john.d
+joh.doe
+johndoe
+johdoe
+doe.john
+d.john
+doe.j
+doe.joh
+doejohn
+doejoh
+jane.neena
+j.neena
+jane.n
+jan.nee
+janeneena
+jannee
+neena.jane
+n.jane
+neena.j
+nee.jan
+neenajane
+neejan
+william.smith
+w.smith
+william.s
+wil.smi
+williamsmith
+wilsmi
+smith.william
+s.william
+smith.w
+smi.wil
+smithwilliam
+smiwil
+julian.asange
+j.asange
+julian.a
+jul.asa
+julianasange
+julasa
+asange.julian
+a.julian
+asange.j
+asa.jul
+asangejulian
+asajul
 ```
+
+**Redirect output to file**
+```
+$ python3 jenny.py --file example.csv --first-last >> first.last
+
+$ cat first.last 
+john.doe
+jane.neena
+william.smith
+julian.asange

@@ -9,8 +9,13 @@ parser = argparse.ArgumentParser(
 '''
 Input file.
 '''
-parser.add_argument('-file', type=str, action='store', required=True, 
+parser.add_argument('--file', type=str, action='store', required=True, 
 						help='names_file.csv')
+'''
+Keep list capitalization as is.
+'''
+parser.add_argument('--nocap', action="store_true", required=False,
+					help='Maintains capitalizion of CSV file. Does not convert to all lowercase.')
 '''
 Eventual option to add Output to file option.
 '''
@@ -76,6 +81,11 @@ def opencsv(file):
 
 def main():
 	dict = opencsv(args.file)
+#	if args.nocap == True:
+#			for row in dict:
+#				first = row[0]()
+#				last = row[1]()
+#	elif args.nocap == False:
 	for row in dict:
 		first = row[0].lower()
 		last = row[1].lower()
