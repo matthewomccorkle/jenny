@@ -46,6 +46,8 @@ parser.add_argument('--firstlast', action="store_true", required=False,
 					help='firstlast')
 parser.add_argument('--firlas', action="store_true", required=False,
 					help='firlas')
+parser.add_argument('--flast', action="store_true", required=False,
+					help='flast')
 '''
 Below here are the last first syntax options.
 '''
@@ -61,6 +63,8 @@ parser.add_argument('--lastfirst', action="store_true", required=False,
 					help='lastfirst')
 parser.add_argument('--lasfir', action="store_true", required=False,
 					help='lasfir')
+parser.add_argument('--lfirst', action="store_true", required=False,
+					help='lfirst')
 '''
 Kitchen Sink option.
 '''
@@ -109,6 +113,9 @@ def main():
 		#FirLas
 		if args.firlas == True:
 			print(first[0:3] + last[0:3])
+		#FLast
+		if args.flast == True:
+			print(first[0] + last)
 
 # last,first conversions:
 
@@ -130,6 +137,9 @@ def main():
 		#LasFir
 		if args.lasfir == True:
 			print(last[0:3] + first[0:3])
+		#LFirst
+		if args.lfirst == True:
+			print(last[0] + first)
 
 # Kitchen Sink option:
 		#First.Last
@@ -150,6 +160,9 @@ def main():
 		#FirLas
 		if args.sink == True:
 			print(first[0:3] + last[0:3])
+		#FLast
+		if args.sink == True:
+			print(first[0] + last)
 		#Last.First
 		if args.sink == True:
 			print(last + "." + first)
@@ -168,6 +181,9 @@ def main():
 		#LasFir
 		if args.sink == True:
 			print(last[0:3] + first[0:3])
+		#LFirst
+		if args.sink == True:
+			print(last[0] + first)
 
 #output_file = args.out
 #if args.out == True:
