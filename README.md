@@ -42,19 +42,22 @@ python3 jenny.py -h
 
 options:
   -h, --help    show this help message and exit
-  -file FILE    names_file.csv
+  --file FILE   names_file.csv
+  --nocap       Maintains capitalizion of CSV file. Does not convert to all lowercase.
   --first-last  first.last
   --f-last      f.last
   --first-l     first.l
   --fir-las     fir.las
   --firstlast   firstlast
   --firlas      firlas
+  --flast       flast
   --last-first  last.first
   --l-first     l.first
   --last-f      last.f
   --las-fir     las.fir
   --lastfirst   lastfirst
   --lasfir      lasfir
+  --lfirst      lfirst
   --sink        Returns formatted username list using all options. This creates 12 versions of each name.
 ```
 **first.last example:**
@@ -94,48 +97,56 @@ john.d
 joh.doe
 johndoe
 johdoe
+jdoe
 doe.john
 d.john
 doe.j
 doe.joh
 doejohn
 doejoh
+djohn
 jane.neena
 j.neena
 jane.n
 jan.nee
 janeneena
 jannee
+jneena
 neena.jane
 n.jane
 neena.j
 nee.jan
 neenajane
 neejan
+njane
 william.smith
 w.smith
 william.s
 wil.smi
 williamsmith
 wilsmi
+wsmith
 smith.william
 s.william
 smith.w
 smi.wil
 smithwilliam
 smiwil
+swilliam
 julian.asange
 j.asange
 julian.a
 jul.asa
 julianasange
 julasa
+jasange
 asange.julian
 a.julian
 asange.j
 asa.jul
 asangejulian
 asajul
+ajulian
 ```
 
 **Redirect output to file**
