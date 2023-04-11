@@ -65,6 +65,8 @@ parser.add_argument('--lasfir', action="store_true", required=False,
 					help='lasfir')
 parser.add_argument('--lfirst', action="store_true", required=False,
 					help='lfirst')
+parser.add_argument('--lastttttttf', action="store_true", required=False,
+					help='lastttttttf')
 '''
 Kitchen Sink option.
 '''
@@ -140,6 +142,9 @@ def main():
 		#LFirst
 		if args.lfirst == True:
 			print(last[0] + first)
+		#lasttttf
+		if args.lastttttttf == True:
+			print(last[0:7] + first[0])
 
 # Kitchen Sink option:
 		#First.Last
